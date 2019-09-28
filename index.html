@@ -90,45 +90,46 @@
     </style>
 </head>
 <body>
-<h1 class="header-title">todos</h1>
+<h1 class="header-title" role="banner" aria-label="Label todos">todos</h1>
 <div class="section-rectangles-wrapper">
     <div class="section-rectangle-decorative2"></div>
     <div class="section-rectangle-decorative1"></div>
     <div class="section-rectangle">
-        <div class="section-main">
+        <div class="section-main" role="main">
             <table id="section-main_control-row" class="section-main_row">
                 <tr>
                     <td width="62">
-                        <img src="icons/select-all.png" class="row_icon">
+                        <input type="image" src="icons/select-all.png" class="row_icon" role="button"
+                               aria-label="Expand the list of results">
                     </td>
                     <td>
-                        <input type="text" class="input-field" placeholder="What needs to be done?">
+                        <input type="text" class="input-field" placeholder="What needs to be done?" role="textbox">
                     </td>
                 </tr>
             </table>
+            <div role="" aria-label="List of results">
+                <table class="section-main_row">
+                    <tr>
+                        <td width="62">
+                            <input type="image" src="icons/close.png" class="row_icon" role="radio">
+                        </td>
+                        <td>
+                            HTML
+                        </td>
+                    </tr>
+                </table>
 
-            <table class="section-main_row">
-                <tr>
-                    <td width="62">
-                        <input type="image" src="icons/close.png" class="row_icon">
-                    </td>
-                    <td>
-                        HTML
-                    </td>
-                </tr>
-            </table>
-
-            <table class="section-main_row">
-                <tr>
-                    <td width="62">
-                        <input type="image" src="icons/close.png" class="row_icon">
-                    </td>
-                    <td>
-                        CSS
-                    </td>
-                </tr>
-            </table>
-
+                <table class="section-main_row">
+                    <tr>
+                        <td width="62">
+                            <input type="image" src="icons/close.png" class="row_icon" role="radio">
+                        </td>
+                        <td>
+                            CSS
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="section-main_bottom-menu">
                 <span id="items-counter" class="section-main_bottom-menu_text">3 items left</span>
                 <button id="AllButton" class="section-main_bottom-menu-button">All</button>
