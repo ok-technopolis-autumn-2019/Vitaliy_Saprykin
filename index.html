@@ -5,7 +5,7 @@
     <title>todos</title>
     <style>
         body {
-            font-family: "Roboto Thin";
+            font-family: "Roboto Thin", serif;
             background-color: #f5f5f5;
         }
 
@@ -19,19 +19,57 @@
             text-align: center;
         }
 
-        .rectangle {
+        .section-rectangle {
+            width: 562px;
+            height: 402px;
+            background: #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: absolute;
+        }
+
+        .section-rectangle-decorative1 {
+            width: 558px;
+            height: 402px;
+            background: #FFFFFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            left: 2px;
+            top: 5px;
+
+        }
+
+        .section-rectangle-decorative2 {
+            width: 554px;
+            height: 402px;
+            background: #FFFFFF;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            left: 4px;
+            top: 10px;
+
+        }
+
+        .section-rectangles-wrapper {
             width: 562px;
             height: 402px;
             margin-left: auto;
             margin-right: auto;
-            background: #FFFFFF;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
     </style>
 </head>
 <body>
 <p class="header-title">todos</p>
-<div class="rectangle"></div>
+<div class="section-rectangles-wrapper">
+    <div class="section-rectangle-decorative2"></div>
+    <div class="section-rectangle-decorative1"></div>
+    <div class="section-rectangle">
+        <div class="section-main">
+            <div class="section-main_control">
 
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
