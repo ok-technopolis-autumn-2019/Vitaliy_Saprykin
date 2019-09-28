@@ -15,7 +15,6 @@
             color: #CCCCCC;
             font-style: normal;
             font-weight: 200;
-            letter-spacing: -2.5px;
             text-align: center;
         }
 
@@ -35,7 +34,6 @@
             position: absolute;
             left: 2px;
             top: 5px;
-
         }
 
         .section-rectangle-decorative2 {
@@ -46,7 +44,6 @@
             position: absolute;
             left: 4px;
             top: 10px;
-
         }
 
         .section-rectangles-wrapper {
@@ -56,16 +53,61 @@
             margin-right: auto;
             position: relative;
         }
+
+        .section-main_row {
+            width: 562px;
+            height: 66px;
+            box-shadow: inset 0px -1px 0px #E6E6E6;
+            padding: 2px;
+        }
+
+        .section-main_bottom-menu {
+            width: 562px;
+            height: 43px;
+            box-shadow: inset 0px 1px 0px #E6E6E6;
+            padding: 2px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .row_icon {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .input-field {
+            font-family: "Roboto Thin";
+            font-size: 24px;
+            font-style: italic;
+            width: 420px;
+            border: none;
+        }
     </style>
 </head>
 <body>
-<p class="header-title">todos</p>
+<h1 class="header-title">todos</h1>
 <div class="section-rectangles-wrapper">
     <div class="section-rectangle-decorative2"></div>
     <div class="section-rectangle-decorative1"></div>
     <div class="section-rectangle">
         <div class="section-main">
-            <div class="section-main_control">
+            <table id="section-main_control-row" class="section-main_row">
+                <tr>
+                    <td width="62">
+                        <img src="icons/select-all.png" class="row_icon">
+                    </td>
+                    <td>
+                        <input type="text" class="input-field" placeholder="What needs to be done?">
+                    </td>
+                </tr>
+            </table>
+
+            <div class="section-main_row">
+
+            </div>
+
+            <div class="section-main_bottom-menu">
 
             </div>
         </div>
