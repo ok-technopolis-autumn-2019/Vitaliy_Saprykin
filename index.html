@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="todo-app">
-    <header class="todo-app__header" role="banner">
+    <header class="todo-app__header" >
         <h1 class="header-title">todos</h1>
     </header>
     <main class="todo-app__frame">
@@ -20,11 +20,53 @@
             </div>
             <div class="main-controls__create-new">
                 <input type="text" class="input-field" placeholder="What needs to be done?"
-                       role="textbox" aria-label="Add new item" autofocus="autofocus">
+                       aria-label="Add new item" autofocus="autofocus">
             </div>
         </section>
+
+
         <section class="todo-app__tasks">
+            <ul class="todo-app__task-list task-list">
+                <li class="todo-app__task-item task-item">
+                    <div class="task-item__view">
+                        <input type="checkbox" class="task-item_status"
+                               aria-label="Task: HTML"/>
+                        <span class="task-item__text">HTML</span>
+                        <button class="task-item__delete">Delete task</button>
+                    </div>
+                    <div class="task-item__edit" hidden="hidden">
+                        <input type="text" class="task-item_input"
+                               value="HTML" aria-label="Edit task: HTML"/>
+                    </div>
+                </li>
+                <li class="todo-app__task-item task-item">
+                    <div class="task-item__view">
+                        <input type="checkbox" class="task-item_status"
+                               aria-label="Task: CSS"/>
+                        <span class="task-item__text">CSS</span>
+                        <button class="task-item__delete">Delete task</button>
+                    </div>
+                    <div class="task-item__edit" hidden="hidden">
+                        <input type="text" class="task-item_input"
+                               value="CSS" aria-label="Edit task: CSS"/>
+                    </div>
+                </li>
+                <li class="todo-app__task-item task-item">
+                    <div class="task-item__view">
+                        <input type="checkbox" class="task-item_status"
+                               aria-label="Task: JS"/>
+                        <span class="task-item__text">JS</span>
+                        <button class="task-item__delete">Delete task</button>
+                    </div>
+                    <div class="task-item__edit" hidden="hidden">
+                        <input type="text" class="task-item_input"
+                               value="JS" aria-label="Edit task: JS"/>
+                    </div>
+                </li>
+            </ul>
         </section>
+
+
         <section class="todo-app__action-bar action-bar">
             <div class="action-bar__item">
                 <div class="task-counter">3 items left</div>
