@@ -131,24 +131,25 @@ body {
     margin-right: 12px;
     width: 40px;
     height: 40px;
-    border-radius: 99px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
-    box-sizing: content-box;
+
     flex-shrink: 0;
 }
 
-.checkbox-label{
+.checkbox-label {
     width: 40px;
     height: 40px;
     position: absolute;
     top: 0;
     left: 0;
     display: block;
+    border-radius: 99px;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    box-sizing: content-box;
     text-indent: -9999px;
 }
 
-.task-item__status:checked + .checkbox-label{
+.task-item__status:checked + .checkbox-label {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -156,12 +157,13 @@ body {
     left: 0;
     background: #FFFFFF;
     border-radius: 99px;
-    border: 1px solid #77e615;
+    border: 1px solid #5DC2AF;
     box-sizing: border-box;
     content: "";
-    padding:0;
-    margin:0;
-
+    padding: 0;
+    margin: 0;
+    background: url("../icons/completed@2x.png") no-repeat 50%;
+    background-size: 50%;
 }
 
 .task-item__text {
