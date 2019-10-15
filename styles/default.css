@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100&display=swap');
 
-
 body {
     background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    color: #CCCCCC;
 }
 
 .todo-app {
@@ -12,7 +13,6 @@ body {
 }
 
 .header-title {
-    font-family: 'Roboto', sans-serif;
     color: #CCCCCC;
     font-weight: 100;
     font-size: 100px;
@@ -61,23 +61,38 @@ body {
 .todo-app__main-controls {
     display: flex;
     padding: 12px;
+    align-items: center;
+    box-shadow: inset 0 0 2px #E6E6E6;
 }
 
 .main-controls__create-new {
     flex: 1;
 }
 
+.main-controls__select-all-button {
+    background: url("../icons/select-all@2x.png") no-repeat 0 0;
+    background-size: contain;
+    width: 24px;
+    height: 12px;
+    border: none;
+    margin-right: 12px;
+}
+
 .input-field-create-new {
-    font-family: "Roboto", serif;
+    font-family: Roboto, cursive;
     font-size: 24px;
     font-style: italic;
+    color: #CCCCCC;
     border: none;
+    outline: none;
     flex: 1;
     width: 100%;
 }
 
 .todo-app__tasks {
     flex-grow: 1;
+    overflow: auto;
+    color: #666666;
 }
 
 .todo-app__task-list {
@@ -85,29 +100,47 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 12px;
+    padding: 0;
 }
 
 .task-item__view {
     display: flex;
     align-content: space-between;
+    align-items: flex-start;
+    box-shadow: inset 0 -1px 0 #E6E6E6;
+    min-height: 64px;
+    padding: 12px;
+    box-sizing: border-box;
 }
 
 .task-item:hover {
-    background: #CCCCCC;
+    background: #FAFAFA;
 }
 
 .task-item:hover .task-item__delete {
     visibility: visible;
 }
 
+.task-item__status {
+    margin-right: 12px;
+}
+
 .task-item__text {
     flex-grow: 1;
     word-break: break-all;
+    font-size: 24px;
 }
 
 .task-item__delete {
     visibility: hidden;
+    background: url("../icons/close@2x.png") no-repeat 0 0;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border: none;
+    padding: 0;
+    margin-top: 9px;
+    flex-shrink: 0;
 }
 
 .todo-app__action-bar {
@@ -119,18 +152,35 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    font-size: 14px;
+    color: #888888;
+}
+
+.task-filter .task-filter__item + .task-filter__item {
+    margin-left: 10px;
 }
 
 .task-filter__input {
-    visibility: hidden;
+    display: none;
 }
 
 .task-filter__input:checked + .task-filter__text {
     border: 1px solid #CCCCCC;
+    border-radius: 3px;
+}
+
+.task-filter__text {
+    padding: 2px 8px 2px 8px;
 }
 
 .task-clear-completed {
-    background-color: inherit;
+    background: none;
     border: none;
+    font-family: Roboto, serif;
+    outline: none;
+    color: #888888;
 }
 
+.task-clear-completed:active {
+    border: none;
+}
