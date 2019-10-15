@@ -59,16 +59,21 @@ body {
 }
 
 .todo-app__main-controls {
-    align-self: flex-start;
     display: flex;
+    padding: 12px;
 }
 
-.input-field {
+.main-controls__create-new {
+    flex: 1;
+}
+
+.input-field-create-new {
     font-family: "Roboto", serif;
     font-size: 24px;
     font-style: italic;
-    width: 420px;
     border: none;
+    flex: 1;
+    width: 100%;
 }
 
 .todo-app__tasks {
@@ -79,6 +84,7 @@ body {
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    margin: 0;
     padding: 12px;
 }
 
