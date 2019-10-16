@@ -206,10 +206,20 @@ body {
 
 .task-filter__item {
   position: relative;
+  padding: 2px 8px 2px 8px;
 }
 
 .task-filter .task-filter__item + .task-filter__item {
   margin-left: 10px;
+}
+
+.action-bar__button {
+  padding: 4px 8px 4px 8px;
+}
+
+.action-bar__button:hover {
+  background: #f5f5f5;
+  border-radius: 3px;
 }
 
 .task-filter__input {
@@ -217,11 +227,6 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-}
-
-.task-filter__input:hover + .task-filter__text {
-  background: #f5f5f5;
-  border-radius: 3px;
 }
 
 .task-filter__input:checked + .task-filter__text {
@@ -233,21 +238,12 @@ body {
   text-shadow: #5dc2af 1px 1px 3px;
 }
 
-.task-filter__text {
-  padding: 2px 8px 2px 8px;
-}
-
 .clear-completed {
   background: none;
   border: none;
   font-family: Roboto, serif;
   outline: none;
   color: #888888;
-}
-
-.clear-completed:hover {
-  background: #f5f5f5;
-  border-radius: 3px;
 }
 
 .clear-completed:active {
