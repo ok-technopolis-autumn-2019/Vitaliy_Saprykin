@@ -211,12 +211,15 @@ body {
 .task-item__delete {
   opacity: 0;
   background-size: 18px 18px;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   border: none;
   padding: 0;
-  margin-left: 4px;
   flex-shrink: 0;
+}
+
+.task-item__delete:focus {
+  opacity: 100;
 }
 
 .todo-app__action-bar {
@@ -234,11 +237,6 @@ body {
   background: inherit;
 }
 
-.task-filter__item {
-  position: relative;
-  padding: 2px 8px 2px 8px;
-}
-
 .task-counter {
   margin-right: 14px;
 }
@@ -253,10 +251,8 @@ body {
 }
 
 .task-filter__input {
-  visibility: hidden;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -9999px;
 }
 
 .task-filter__text {
@@ -266,6 +262,11 @@ body {
 
 .task-filter__input:checked + .task-filter__text {
   border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+
+.task-filter__input:focus + .task-filter__text {
+  border: 1px solid #8ac2c2;
   border-radius: 3px;
 }
 
